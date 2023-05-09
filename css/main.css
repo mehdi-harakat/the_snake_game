@@ -1,0 +1,130 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Open Sans", sans-serif;
+}
+
+body {
+	background-color: #e3f2fd;
+}
+
+.container {
+	width: 70vmin;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 0px;
+}
+
+.container .high-level,
+.container .user-name {
+	width: 100%;
+	background-color: #0cacfc;
+	color: white;
+	padding: 10px;
+	border: 2px solid #293447;
+	border-radius: 8px;
+	font-size: 16px;
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+.container .high-level span,
+.container .user-name span {
+	color: #293447;
+	font-weight: 800;
+	letter-spacing: 0.5px;
+	margin-left: 15px;
+}
+
+.wrapper-container {
+	width: 70vmin;
+	height: 80vmin;
+	margin: 20px auto 0;
+	background-color: #293447;
+	display: flex;
+	flex-direction: column;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.wrapper-container .game-detials {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 35px;
+	color: #b8c6dc;
+}
+
+.wrapper-container .game-detials .high-score,
+.wrapper-container .game-detials .score {
+	font-size: 20px;
+}
+.wrapper-container .game-detials .high-score span,
+.wrapper-container .game-detials .score span {
+	font-weight: 700;
+	color: #0cacfc;
+}
+
+.wrapper-container .play-board {
+	width: 100%;
+	height: 100%;
+	background-color: #212837;
+	display: grid;
+	grid-template-columns: repeat(30, 1fr);
+	grid-template-rows: repeat(30, 1fr);
+}
+
+.wrapper-container .play-board .food {
+	background-color: #ff003d;
+}
+.wrapper-container .play-board .head {
+	background-color: #60cbff;
+	border: 1px dashed #293447;
+}
+
+.wrapper-container .controls {
+	display: none;
+	justify-content: space-between;
+}
+
+.wrapper-container .controls i {
+	width: calc(100% / 4);
+	height: 50px;
+	text-align: center;
+	color: #b8c6dc;
+	font-size: 20px;
+	line-height: 50px;
+	cursor: pointer;
+}
+
+.wrapper-container .controls i:not(:last-child) {
+	border-right: 2px solid #212837;
+}
+
+@media screen and (max-width: 800px) {
+	.wrapper-container {
+		width: 70vmin;
+		height: 90vmin;
+	}
+
+	.wrapper-container .controls {
+		display: flex;
+	}
+}
+
+.wrapper-container .btn {
+	border: none;
+	background-color: #0cacfc;
+	width: 100%;
+	height: 50px;
+	color: white;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.wrapper-container .btn:hover {
+	background-color: #60cbff;
+}
